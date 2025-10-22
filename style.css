@@ -1,35 +1,82 @@
-/* ===== BPFAM STYLE (unico per tutte le pagine) ===== */
-:root{--bg:#0e0f10;--card:#151821;--stroke:#2a2f3a;--accent:#14e956;--text:#e9eef5;--muted:#a9b3c1}
-*{box-sizing:border-box}
-body{margin:0;background:radial-gradient(1200px 600px at 50% -10%,#15202b22,transparent),var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
-.wrap{max-width:980px;margin:0 auto;padding:22px}
-.banner{width:100%;max-width:520px;border-radius:18px;border:1px solid var(--stroke);display:block;margin:10px auto}
-.brand{font-size:1.9rem;margin:14px 0 6px;text-align:center}
-.center{text-align:center}
-.muted{color:var(--muted)}
-.hero.only-image{margin-top:4px}
-.links{margin:14px 0}
-.btn{display:block;background:linear-gradient(180deg,#1a1f27,#0f1217);border:1px solid var(--stroke);border-radius:14px;padding:14px 18px;margin:10px auto;max-width:540px;color:var(--text);text-decoration:none;font-weight:700;box-shadow:0 4px 18px #0006;transition:.18s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 10px 30px #0008;border-color:var(--accent)}
-.btn.ig{border-color:#f23939aa}
-.btn.tg{border-color:#0088ccaa}
-.divider{border:none;height:1px;background:linear-gradient(90deg,transparent,#333,transparent);margin:24px auto;max-width:720px}
-.foot{opacity:.7;margin:26px 0;text-align:center}
+/* ===== BPFAM UNIFORM BUTTON STYLE ===== */
+:root {
+  --bg: #0a0a0a;
+  --btn-bg: linear-gradient(180deg, #0d0d0d, #161616);
+  --btn-border: #2c2c2c;
+  --btn-hover: linear-gradient(180deg, #ffb300, #ff6600);
+  --accent: #ffb300;
+  --text: #ffffff;
+  --muted: #aaaaaa;
+}
 
-/* Gallerie / Card */
-.grid{display:grid;gap:16px;margin:16px 0}
-.grid-photos{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
-.grid-videos{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
-.tile{background:linear-gradient(180deg,var(--card),#0b0d12);border:1px solid var(--stroke);border-radius:12px;overflow:hidden}
-.tile img{width:100%;height:180px;object-fit:cover;display:block}
-.card{background:linear-gradient(180deg,var(--card),#0b0d12);border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
-.thumb{position:relative;aspect-ratio:16/9;background:#0b0e13}
-.thumb iframe,.thumb video{position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0}
-.content{padding:12px 14px}
-.content .muted{font-size:.9rem}
+* { box-sizing: border-box; }
 
-/* Lightbox foto (CSS only) */
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;padding:16px}
-.lb:target{display:flex}
-.lb img{max-width:96vw;max-height:88vh;border-radius:14px;border:1px solid #333}
-.close{position:fixed;top:14px;right:16px;background:#000;border:1px solid #333;border-radius:10px;color:#fff;padding:8px 10px;text-decoration:none;font-weight:700}
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0a0a0a 20%, #111 100%);
+  color: var(--text);
+  font-family: "Poppins", system-ui, sans-serif;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* Header image */
+.banner {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 16px;
+  margin: 24px auto;
+  display: block;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px #0008;
+}
+
+/* Titoli */
+.brand {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: var(--accent);
+  text-shadow: 0 0 12px #ffb300aa;
+}
+.muted { color: var(--muted); line-height: 1.6; }
+
+/* Pulsanti — tutti uguali */
+.btn {
+  display: block;
+  background: var(--btn-bg);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--btn-border);
+  border-radius: 14px;
+  padding: 15px 20px;
+  margin: 10px auto;
+  max-width: 420px;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 6px 18px #0006;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #ffb300aa;
+}
+
+/* Colori personalizzati opzionali */
+.btn.ig { border-color: #f23939; }
+.btn.tg { border-color: #0088cc; }
+
+/* Sezione divisoria */
+.divider {
+  height: 1px;
+  border: none;
+  background: linear-gradient(90deg, transparent, #333, transparent);
+  margin: 35px auto;
+  width: 80%;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: var(--muted);
+}
