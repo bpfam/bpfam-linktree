@@ -1,9 +1,9 @@
-/* ===== BPFAM UNIFORM BUTTON STYLE ===== */
+/* ===== BPFAM UNIFORM BUTTON STYLE (V2 Glow Edition) ===== */
 :root {
   --bg: #0a0a0a;
   --btn-bg: linear-gradient(180deg, #0d0d0d, #161616);
-  --btn-border: #2c2c2c;
-  --btn-hover: linear-gradient(180deg, #ffb300, #ff6600);
+  --btn-border: #00b7ff;
+  --btn-hover-border: #ffb300;
   --accent: #ffb300;
   --text: #ffffff;
   --muted: #aaaaaa;
@@ -27,8 +27,8 @@ body {
   border-radius: 16px;
   margin: 24px auto;
   display: block;
-  border: 1px solid #333;
-  box-shadow: 0 0 20px #0008;
+  border: 1px solid #222;
+  box-shadow: 0 0 25px #000a;
 }
 
 /* Titoli */
@@ -36,11 +36,14 @@ body {
   font-size: 1.8rem;
   margin: 10px 0;
   color: var(--accent);
-  text-shadow: 0 0 12px #ffb300aa;
+  text-shadow: 0 0 10px #ffb30099;
 }
-.muted { color: var(--muted); line-height: 1.6; }
+.muted {
+  color: var(--muted);
+  line-height: 1.6;
+}
 
-/* Pulsanti — tutti uguali */
+/* === Pulsanti identici per tutti === */
 .btn {
   display: block;
   background: var(--btn-bg);
@@ -53,20 +56,17 @@ body {
   margin: 10px auto;
   max-width: 420px;
   transition: all 0.25s ease-in-out;
-  box-shadow: 0 6px 18px #0006;
+  box-shadow: 0 0 20px #00b7ff33;
 }
 
 .btn:hover {
-  background: var(--btn-hover);
+  border-color: var(--btn-hover-border);
+  box-shadow: 0 0 25px #ffb300aa, 0 0 10px #ffb30066 inset;
   transform: scale(1.03);
-  box-shadow: 0 0 25px #ffb300aa;
+  background: linear-gradient(180deg, #1a1a1a, #101010);
 }
 
-/* Colori personalizzati opzionali */
-.btn.ig { border-color: #f23939; }
-.btn.tg { border-color: #0088cc; }
-
-/* Sezione divisoria */
+/* Divider e footer */
 .divider {
   height: 1px;
   border: none;
