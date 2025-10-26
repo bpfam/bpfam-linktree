@@ -18,13 +18,10 @@
       --shadow: 0 10px 35px rgba(0,0,0,.4);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: radial-gradient(circle at top, rgba(0,224,199,.05) 0%, transparent 60%), var(--bg);
       font-family: "Poppins", system-ui, sans-serif;
       color: var(--text);
       display: flex;
@@ -32,6 +29,22 @@
       justify-content: center;
       min-height: 100vh;
       padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+
+      /* === SFONDO 3D GRIGLIA === */
+      background-color: var(--bg);
+      background-image: 
+        linear-gradient(90deg, rgba(0,224,199,.06) 1px, transparent 1px),
+        linear-gradient(rgba(0,224,199,.06) 1px, transparent 1px);
+      background-size: 50px 50px;
+      perspective: 800px;
+      animation: moveGrid 18s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      0% { background-position: 0 0; }
+      100% { background-position: 50px 50px; }
     }
 
     .card {
@@ -43,6 +56,9 @@
       padding: 32px 28px;
       text-align: center;
       border: 1px solid rgba(255,255,255,.06);
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(8px);
     }
 
     h1 {
@@ -55,7 +71,6 @@
     p {
       font-size: 16px;
       line-height: 1.6;
-      color: var(--text);
       margin: 12px 0;
     }
 
@@ -70,9 +85,7 @@
       text-align: left;
     }
 
-    .section strong {
-      color: var(--accent);
-    }
+    .section strong { color: var(--accent); }
 
     a {
       color: var(--accent);
@@ -80,9 +93,7 @@
       word-break: break-all;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     footer {
       margin-top: 28px;
