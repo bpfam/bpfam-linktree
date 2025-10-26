@@ -1,173 +1,157 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BPFAM — Contatti Ufficiali</title>
-  <meta name="description" content="BPFAM Contatti Ufficiali: canali verificati e profili social." />
-  <meta property="og:title" content="BPFAM — Contatti Ufficiali" />
-  <meta property="og:description" content="Resta connesso solo attraverso i canali verificati BPFAM." />
-  <meta property="og:image" content="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg" />
-  <meta name="theme-color" content="#0c0f14" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPFAM CONTATTI UFFICIALI 💎</title>
+  <meta name="description" content="Contatti ufficiali e verificati del network BPFAM. Diffida da profili non elencati.">
+  <meta name="theme-color" content="#00E0C7">
 
   <style>
-    :root{
-      --bg:#0c0f14;           /* sfondo scuro elegante */
-      --card:#121723;         /* card */
-      --muted:#9aa3b2;        /* testo secondario */
-      --text:#e9eef7;         /* testo principale */
-      --brand:#00E0C7;        /* accento BPFAM acqua */
-      --link:#1da1f2;         /* accento link secondari */
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --ring:0 0 0 2px rgba(0,224,199,.25);
+    :root {
+      --bg: #0b0d10;
+      --card: #11151b;
+      --accent: #00E0C7;
+      --text: #e9eef7;
+      --muted: #9aa3b2;
+      --radius: 18px;
+      --shadow: 0 10px 35px rgba(0,0,0,.4);
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 800px at 80% -10%, rgba(0,224,199,.08), transparent 60%),
-        radial-gradient(1200px 800px at -10% 110%, rgba(0,224,199,.06), transparent 60%),
-        var(--bg);
-      display:flex; align-items:center; justify-content:center;
-      padding:32px;
+    * {
+      box-sizing: border-box;
     }
 
-    .wrap{
-      width:min(720px, 100%);
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, rgba(0,224,199,.05) 0%, transparent 60%), var(--bg);
+      font-family: "Poppins", system-ui, sans-serif;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px 20px;
     }
 
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.06);
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      max-width: 720px;
+      width: 100%;
+      padding: 32px 28px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.06);
     }
 
-    header{
-      text-align:center;
-      padding:28px 20px 8px;
-    }
-    .brand-img{
-      width:120px; height:120px; object-fit:cover; border-radius:50%;
-      border:2px solid rgba(255,255,255,.12);
-      box-shadow:0 6px 20px rgba(0,0,0,.35);
-    }
-    h1{
-      margin:14px 0 6px; font-size:clamp(22px, 2.8vw, 30px); letter-spacing:.2px;
-    }
-    .subtitle{
-      margin:0 12px 20px; color:var(--muted); line-height:1.5;
+    h1 {
+      font-size: clamp(22px, 5vw, 32px);
+      color: var(--accent);
+      text-shadow: 0 0 15px rgba(0,224,199,.5);
+      margin-bottom: 18px;
     }
 
-    .section{
-      padding:8px 18px 24px;
-      display:grid; gap:12px;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      margin: 12px 0;
     }
 
-    .btn{
-      display:flex; align-items:center; gap:12px;
-      width:100%; padding:14px 16px;
-      background:#0F1420; border:1px solid rgba(255,255,255,.06);
-      color:var(--text); text-decoration:none; border-radius:14px;
-      transition:transform .06s ease, border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    .divider {
+      margin: 22px auto;
+      width: 80%;
+      border-top: 1px dashed rgba(255,255,255,.15);
     }
-    .btn:hover{ transform:translateY(-1px); border-color:rgba(0,224,199,.45); box-shadow:var(--ring); }
-    .btn:active{ transform:translateY(0); }
-    .btn .ico{
-      width:24px; height:24px; flex:0 0 24px; opacity:.95;
-    }
-    .btn .label{ font-weight:600; }
-    .btn .hint{ margin-left:auto; color:var(--muted); font-size:14px; }
 
-    footer{
-      padding:18px 22px 24px; color:var(--muted); font-size:13px; text-align:center;
-      border-top:1px dashed rgba(255,255,255,.08);
+    .section {
+      margin: 14px 0;
+      text-align: left;
     }
-    .fineprint{opacity:.85}
 
-    /* piccole colonne se serve più spazio in desktop */
-    @media (min-width:700px){
-      .section{ grid-template-columns:1fr 1fr; }
+    .section strong {
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 20px; }
+      .card { padding: 26px 20px; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <div class="card">
+  <div class="card">
+    <h1>BPFAM CONTATTI UFFICIALI 💎</h1>
 
-      <header>
-        <img class="brand-img" alt="BPFAM" src="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg">
-        <h1>BPFAM — Contatti Ufficiali 💎</h1>
-        <p class="subtitle">
-          📍 Resta connesso solo attraverso i canali <strong>verificati</strong> BPFAM.<br />
-          Tutti i contatti qui sotto sono ufficiali e riconosciuti dal network.
-        </p>
-      </header>
+    <p>📍 Resta connesso solo attraverso i canali verificati BPFAM.<br>
+    Tutti i contatti elencati qui sotto sono ufficiali e riconosciuti dal network BPFAM.</p>
 
-      <!-- INSTAGRAM -->
-      <section class="section" aria-label="Instagram">
-        <a class="btn" href="https://instagram.com/bpfamofficial" target="_blank" rel="noopener">
-          <!-- Instagram SVG -->
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
-          <span class="label">Instagram Principale</span>
-          <span class="hint">@bpfamofficial</span>
-        </a>
+    <div class="divider"></div>
 
-        <a class="btn" href="https://instagram.com/bpfamofficial420backup" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
-          <span class="label">Instagram Backup</span>
-          <span class="hint">@bpfamofficial420backup</span>
-        </a>
+    <div class="section">
+      🔴 <strong>INSTAGRAM PRINCIPALE 📲</strong><br>
+      👉 <a href="https://instagram.com/bpfamofficial" target="_blank">@bpfamofficial</a><br><br>
 
-        <a class="btn" href="https://instagram.com/bpfam_official420media" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/></svg>
-          <span class="label">Instagram Media</span>
-          <span class="hint">@bpfam_official420media</span>
-        </a>
-      </section>
+      🟠 <strong>INSTAGRAM BACKUP 📲</strong><br>
+      👉 <a href="https://instagram.com/bpfamofficial420backup" target="_blank">@bpfamofficial420backup</a><br><br>
 
-      <!-- TELEGRAM -->
-      <section class="section" aria-label="Telegram">
-        <a class="btn" href="https://t.me/contattobpfam" target="_blank" rel="noopener">
-          <!-- Telegram SVG -->
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.2a1.4 1.4 0 0 0-1.5-.17L3.3 12.1a1.1 1.1 0 0 0 .12 2.06l4.7 1.6 1.9 4.8a1.1 1.1 0 0 0 2 .12l2.8-4.1 4.3 3.2a1.3 1.3 0 0 0 2-1l1.2-12a1.4 1.4 0 0 0-.44-1.58zM8.7 13.9l9.3-7-7.6 8.9-.2 2.9-1.5-3.8z"/></svg>
-          <span class="label">Contatto Telegram</span>
-          <span class="hint">@contattobpfam</span>
-        </a>
-
-        <a class="btn" href="https://t.me/+CIA2nWh5thE2ZWFk" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.2a1.4 1.4 0 0 0-1.5-.17L3.3 12.1a1.1 1.1 0 0 0 .12 2.06l4.7 1.6 1.9 4.8a1.1 1.1 0 0 0 2 .12l2.8-4.1 4.3 3.2a1.3 1.3 0 0 0 2-1l1.2-12a1.4 1.4 0 0 0-.44-1.58zM8.7 13.9l9.3-7-7.6 8.9-.2 2.9-1.5-3.8z"/></svg>
-          <span class="label">Canale Telegram Ufficiale</span>
-          <span class="hint">t.me/+CIA2nWh5thE2ZWFk</span>
-        </a>
-
-        <!-- Aggiungi qui eventuali bot ufficiali -->
-        <!-- Esempio:
-        <a class="btn" href="https://t.me/Bpfarmbot" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 015 5v1h1a2 2 0 012 2v7a5 5 0 01-5 5H9a5 5 0 01-5-5V10a2 2 0 012-2h1V7a5 5 0 015-5z"/></svg>
-          <span class="label">BOT Telegram — BPFARM</span>
-          <span class="hint">@Bpfarmbot</span>
-        </a>
-        -->
-      </section>
-
-      <footer>
-        <div class="fineprint">💎 BPFAM — Serietà • Qualità • Rispetto</div>
-        <div class="fineprint">© <span id="y"></span> BPFAM. Tutti i diritti riservati.</div>
-      </footer>
-
+      🟣 <strong>INSTAGRAM MEDIA 🎥</strong><br>
+      👉 <a href="https://instagram.com/bpfam_official420media" target="_blank">@bpfam_official420media</a>
     </div>
-  </main>
 
-  <script>
-    // anno automatico
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+    <div class="divider"></div>
+
+    <div class="section">
+      💬 <strong>CONTATTO TELEGRAM 📲</strong><br>
+      👉 <a href="https://t.me/bpfam" target="_blank">@bpfam</a><br><br>
+
+      📢 <strong>CANALE TELEGRAM UFFICIALE 📲</strong><br>
+      👉 <a href="https://t.me/+CIA2nWh5thE2ZWFk" target="_blank">t.me/+CIA2nWh5thE2ZWFk</a><br><br>
+
+      👾 <strong>BOT TELEGRAM UFFICIALE 🤖</strong><br>
+      👉 <a href="https://t.me/bpfam2bot" target="_blank">@bpfam2bot</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      🥔 <strong>CONTATTO POTATO 📲</strong><br>
+      👉 <a href="https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ" target="_blank">https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ</a><br><br>
+
+      🥔 <strong>CANALE POTATO 📲</strong><br>
+      👉 <a href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank">https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA</a><br><br>
+
+      📲 <strong>CONTATTO SIGNAL 📲</strong><br>
+      👉 <a href="https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ" target="_blank">https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ</a>
+    </div>
+
+    <div class="divider"></div>
+
+    <p><strong>⚠️ Diffida da profili o canali non presenti in questo elenco.</strong><br>
+    Solo i contatti elencati sono verificati e gestiti direttamente da <strong>BPFAM Official</strong>.</p>
+
+    <div class="divider"></div>
+
+    <footer>
+      © 2025 — Powered by BPFAM Official Network | Management Division 💎
+    </footer>
+  </div>
 </body>
 </html>
