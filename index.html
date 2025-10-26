@@ -61,11 +61,26 @@
       backdrop-filter: blur(8px);
     }
 
+    .logo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(0,224,199,.5), 0 0 60px rgba(0,224,199,.2);
+      border: 2px solid rgba(0,224,199,.3);
+      animation: pulse 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulse {
+      from { box-shadow: 0 0 20px rgba(0,224,199,.4), 0 0 40px rgba(0,224,199,.15); }
+      to   { box-shadow: 0 0 35px rgba(0,224,199,.8), 0 0 90px rgba(0,224,199,.3); }
+    }
+
     h1 {
       font-size: clamp(22px, 5vw, 32px);
       color: var(--accent);
       text-shadow: 0 0 15px rgba(0,224,199,.5);
-      margin-bottom: 18px;
+      margin: 16px 0 18px;
     }
 
     p {
@@ -109,6 +124,8 @@
 </head>
 <body>
   <div class="card">
+    <img class="logo" src="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg" alt="BPFAM Logo">
+    
     <h1>BPFAM CONTATTI UFFICIALI 💎</h1>
 
     <p>📍 Resta connesso solo attraverso i canali verificati BPFAM.<br>
