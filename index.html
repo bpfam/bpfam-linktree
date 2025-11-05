@@ -20,7 +20,6 @@
 
     * { box-sizing: border-box; }
 
-    /* Sblocco scroll e altezza corretta */
     html, body{
       height:auto;
       min-height:100%;
@@ -30,12 +29,10 @@
       margin: 0;
       font-family: "Poppins", system-ui, sans-serif;
       color: var(--text);
-
-      /* niente flex sul body: così la pagina può crescere e scorrere */
       padding: 40px 20px;
-      min-height: 100svh;           /* migliore di 100vh su iOS */
+      min-height: 100svh;
       overflow-x: hidden;
-      overflow-y: auto;              /* <— SCROLL ABILITATO */
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch;
 
       /* === SFONDO 3D GRIGLIA === */
@@ -65,9 +62,7 @@
       position: relative;
       z-index: 2;
       backdrop-filter: blur(8px);
-
-      /* centratura senza flex del body */
-      margin: 0 auto;               /* orizzontale */
+      margin: 0 auto;
     }
 
     .logo {
@@ -169,14 +164,8 @@
     <div class="divider"></div>
 
     <div class="section">
-      🥔 <strong>CONTATTO POTATO 📲</strong><br>
-      👉 <a href="https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ" target="_blank">https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ</a><br><br>
-
       🥔 <strong>CANALE POTATO 📲</strong><br>
-      👉 <a href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank">https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA</a><br><br>
-
-      📲 <strong>CONTATTO SIGNAL 📲</strong><br>
-      👉 <a href="https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ" target="_blank">https://ptwdym158.org/joinchat/B2iAXRTlpC5_5Awy9UugrQ</a>
+      👉 <a href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank">https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA</a>
     </div>
 
     <div class="divider"></div>
