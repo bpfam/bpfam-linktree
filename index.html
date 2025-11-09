@@ -1,181 +1,315 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BPFAM CONTATTI UFFICIALI 💎</title>
   <meta name="description" content="Contatti ufficiali e verificati del network BPFAM. Diffida da profili non elencati.">
   <meta name="theme-color" content="#00E0C7">
 
+  <!-- OpenGraph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BPFAM CONTATTI UFFICIALI 💎">
+  <meta property="og:description" content="Resta connesso solo attraverso i canali verificati BPFAM.">
+  <meta property="og:image" content="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg">
+  <meta property="og:image:alt" content="Logo BPFAM">
+  <meta name="color-scheme" content="dark">
+
   <style>
-    :root {
-      --bg: #0b0d10;
-      --card: #11151b;
-      --accent: #00E0C7;
-      --text: #e9eef7;
-      --muted: #9aa3b2;
-      --radius: 18px;
-      --shadow: 0 10px 35px rgba(0,0,0,.4);
+    :root{
+      --bg:#070a0e;
+      --grid:#00e0c7;
+      --card:#0e131aef;
+      --card-border:#ffffff14;
+      --accent:#00e0c7;
+      --accent-2:#21ffd6;
+      --text:#eaf3ff;
+      --muted:#9aa3b2;
+      --radius:22px;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --glow: 0 0 22px rgba(0,224,199,.45), 0 0 80px rgba(0,224,199,.18);
+      --logo: url(LOGO_URL); /* <-- Sostituisci con il tuo logo oro se vuoi */
     }
 
-    * { box-sizing: border-box; }
+    *{box-sizing:border-box}
 
-    html, body{
-      height:auto;
-      min-height:100%;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Poppins", system-ui, sans-serif;
-      color: var(--text);
-      padding: 40px 20px;
-      min-height: 100svh;
-      overflow-x: hidden;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-      background-color: var(--bg);
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      color:var(--text);
+      background: radial-gradient(1200px 600px at 50% 0%, #0b1220 0%, #05070a 50%, #000 100% );
+      min-height:100svh;
+      overflow-x:hidden;
+      padding:42px 20px;
+      perspective:1000px;
+      /* GRID 3D */
+      --g: color-mix(in oklab, var(--grid), transparent 85%);
       background-image:
-        linear-gradient(90deg, rgba(0,224,199,.06) 1px, transparent 1px),
-        linear-gradient(rgba(0,224,199,.06) 1px, transparent 1px);
-      background-size: 50px 50px;
-      perspective: 800px;
-      animation: moveGrid 18s linear infinite;
+        linear-gradient(90deg, var(--g) 1px, transparent 1px),
+        linear-gradient(0deg,  var(--g) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridMove 22s linear infinite;
+    }
+    @keyframes gridMove{
+      0%   {background-position: 0 0}
+      100% {background-position: 60px 60px}
     }
 
-    @keyframes moveGrid {
-      0% { background-position: 0 0; }
-      100% { background-position: 50px 50px; }
+    .wrap{
+      max-width:920px;
+      margin:0 auto;
+      position:relative;
+      z-index:1;
     }
 
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
+    .card{
+      position:relative;
+      border-radius:var(--radius);
+      padding:34px 26px;
+      background:linear-gradient(180deg, #0f1621ee 0%, #0a1119ee 100%);
+      border:1px solid var(--card-border);
       box-shadow: var(--shadow);
-      max-width: 720px;
-      width: 100%;
-      padding: 32px 28px;
-      text-align: center;
-      border: 1px solid rgba(255,255,255,.06);
-      position: relative;
-      z-index: 2;
-      backdrop-filter: blur(8px);
-      margin: 0 auto;
+      backdrop-filter: blur(10px) saturate(120%);
+      transform-style:preserve-3d;
+      overflow:hidden;
     }
 
-    .logo {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 20px rgba(0,224,199,.5), 0 0 60px rgba(0,224,199,.2);
-      border: 2px solid rgba(0,224,199,.3);
-      animation: pulse 3s infinite alternate ease-in-out;
+    /* bordo glow */
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      border-radius:calc(var(--radius) + 6px);
+      background:
+        radial-gradient(800px 140px at 50% -10%, rgba(0,224,199,.22), transparent 60%),
+        radial-gradient(400px 120px at 10% 20%, rgba(0,224,199,.12), transparent 70%),
+        radial-gradient(400px 120px at 90% 20%, rgba(0,224,199,.12), transparent 70%);
+      filter: blur(10px);
+      z-index:0;
+      pointer-events:none;
     }
 
-    @keyframes pulse {
-      from { box-shadow: 0 0 20px rgba(0,224,199,.4), 0 0 40px rgba(0,224,199,.15); }
-      to   { box-shadow: 0 0 35px rgba(0,224,199,.8), 0 0 90px rgba(0,224,199,.3); }
+    .head{
+      display:flex; align-items:center; gap:18px; justify-content:center;
+      margin-bottom:10px;
     }
 
-    h1 {
-      font-size: clamp(22px, 5vw, 32px);
-      color: var(--accent);
-      text-shadow: 0 0 15px rgba(0,224,199,.5);
-      margin: 16px 0 18px;
+    .logo{
+      width:132px; height:132px; border-radius:50%;
+      object-fit:cover;
+      box-shadow: var(--glow);
+      border:2px solid #00e0c72a;
+      transform: translateZ(30px);
+      transition: transform .25s ease;
     }
 
-    p {
-      font-size: 16px;
-      line-height: 1.6;
-      margin: 12px 0;
+    h1{
+      margin:6px 0 0;
+      font-size: clamp(26px, 4.8vw, 40px);
+      line-height:1.1;
+      color:var(--accent);
+      text-shadow: 0 0 22px rgba(0,224,199,.45);
+      letter-spacing:.3px;
+      transform: translateZ(35px);
     }
 
-    .divider {
-      margin: 22px auto;
-      width: 80%;
-      border-top: 1px dashed rgba(255,255,255,.15);
+    .subtitle{
+      text-align:center;
+      color:var(--muted);
+      margin:12px auto 22px;
+      max-width:720px;
+      transform: translateZ(25px);
     }
 
-    .section {
-      margin: 14px 0;
-      text-align: left;
+    .divider{
+      height:1px;
+      background:linear-gradient(90deg, transparent, #ffffff26, transparent);
+      margin:18px 0 22px;
     }
 
-    .section strong { color: var(--accent); }
+    /* LISTE / BUTTONS */
+    .list{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px 16px;
+    }
+    @media (max-width:720px){ .list{ grid-template-columns: 1fr } }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      word-break: break-all;
+    .item{
+      display:flex; align-items:center; gap:12px;
+      background: #0c131c;
+      border:1px solid #ffffff12;
+      border-radius:16px;
+      padding:14px 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35);
+      position:relative;
+      overflow:hidden;
+    }
+    .item:after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(500px 80px at 0% 0%, rgba(0,224,199,.12), transparent 60%);
+      pointer-events:none;
     }
 
-    a:hover { text-decoration: underline; }
-
-    footer {
-      margin-top: 28px;
-      font-size: 13px;
-      color: var(--muted);
+    .ico{
+      width:38px; height:38px;
+      display:grid; place-items:center;
+      border-radius:12px;
+      background:linear-gradient(145deg, #0f1a24, #0a1117);
+      border:1px solid #ffffff12;
+      box-shadow: inset 0 0 0 1px #00e0c714, 0 0 28px rgba(0,224,199,.05);
+      font-size:20px;
     }
 
-    @media (max-width: 480px) {
-      body { padding: 20px; }
-      .card { padding: 26px 20px; }
+    .txt{ flex:1; min-width:0 }
+    .lbl{ font-weight:600; letter-spacing:.2px }
+    .mut{ color:var(--muted); font-size:14px }
+
+    .btn{
+      white-space:nowrap;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:12px;
+      padding:10px 14px;
+      border:1px solid #00e0c72a;
+      background:linear-gradient(180deg, #0c1a1a, #061312);
+      box-shadow: inset 0 0 0 1px #00e0c71f, 0 0 22px rgba(0,224,199,.12);
+      color:var(--accent);
+      transition: transform .12s ease, box-shadow .12s ease;
     }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 8px 26px rgba(0,224,199,.22) }
+    .btn:active{ transform: translateY(0) }
+
+    /* FOOT */
+    footer{
+      margin-top:24px; text-align:center; color:var(--muted); font-size:13px;
+    }
+
+    /* Parallax tilt */
+    .tilt{ transform-style:preserve-3d }
+    .tilt:hover .logo{ transform: translateZ(45px) rotateX(2deg) rotateY(-3deg) }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img class="logo" src="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg" alt="BPFAM Logo">
-    
-    <h1>BPFAM CONTATTI UFFICIALI 💎</h1>
+  <main class="wrap">
+    <section class="card tilt" id="card">
+      <div class="head">
+        <!-- Cambia src se vuoi usare il logo oro: sostituisci con il tuo URL -->
+        <img class="logo" src="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg" alt="BPFAM Logo">
+        <h1>BPFAM CONTATTI UFFICIALI 💎</h1>
+      </div>
 
-    <p>📍 Resta connesso solo attraverso i canali verificati BPFAM.<br>
-    Tutti i contatti elencati qui sotto sono ufficiali e riconosciuti dal network BPFAM.</p>
+      <p class="subtitle">
+        Resta connesso solo attraverso i canali <b>verificati</b> BPFAM.  
+        Tutti i contatti elencati sono ufficiali e riconosciuti dal network.
+      </p>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <div class="section">
-      🔴 <strong>INSTAGRAM PRINCIPALE 📲</strong><br>
-      👉 <a href="https://www.instagram.com/bpfamofficial420?igsh=MXM4YmljZmE1b2Uweg==" target="_blank">@bpfamofficial420</a><br><br>
+      <div class="list">
+        <!-- INSTAGRAM PRINCIPALE (nuovo) -->
+        <div class="item">
+          <div class="ico">📸</div>
+          <div class="txt">
+            <div class="lbl">Instagram Principale</div>
+            <div class="mut">@bpfamofficial420</div>
+          </div>
+          <a class="btn" href="https://www.instagram.com/bpfamofficial420?igsh=MXM4YmljZmE1b2Uweg==" target="_blank" rel="noopener">Apri</a>
+        </div>
 
-      🟠 <strong>INSTAGRAM BACKUP 📲</strong><br>
-      👉 <a href="https://instagram.com/bpfamofficial420backup" target="_blank">@bpfamofficial420backup</a><br><br>
+        <!-- INSTAGRAM BACKUP -->
+        <div class="item">
+          <div class="ico">🟠</div>
+          <div class="txt">
+            <div class="lbl">Instagram Backup</div>
+            <div class="mut">@bpfamofficial420backup</div>
+          </div>
+          <a class="btn" href="https://instagram.com/bpfamofficial420backup" target="_blank" rel="noopener">Apri</a>
+        </div>
 
-      🟣 <strong>INSTAGRAM MEDIA 🎥</strong><br>
-      👉 <a href="https://instagram.com/bpfam_official420media" target="_blank">@bpfam_official420media</a>
-    </div>
+        <!-- INSTAGRAM MEDIA -->
+        <div class="item">
+          <div class="ico">🎥</div>
+          <div class="txt">
+            <div class="lbl">Instagram Media</div>
+            <div class="mut">@bpfam_official420media</div>
+          </div>
+          <a class="btn" href="https://instagram.com/bpfam_official420media" target="_blank" rel="noopener">Apri</a>
+        </div>
 
-    <div class="divider"></div>
+        <!-- CONTATTO TELEGRAM -->
+        <div class="item">
+          <div class="ico">💬</div>
+          <div class="txt">
+            <div class="lbl">Contatto Telegram</div>
+            <div class="mut">@bpfam</div>
+          </div>
+          <a class="btn" href="https://t.me/bpfam" target="_blank" rel="noopener">Apri</a>
+        </div>
 
-    <div class="section">
-      💬 <strong>CONTATTO TELEGRAM 📲</strong><br>
-      👉 <a href="https://t.me/bpfam" target="_blank">@bpfam</a><br><br>
+        <!-- CANALE TELEGRAM -->
+        <div class="item">
+          <div class="ico">📢</div>
+          <div class="txt">
+            <div class="lbl">Canale Telegram Ufficiale</div>
+            <div class="mut">t.me/+CIA2nWh5thE2ZWFk</div>
+          </div>
+          <a class="btn" href="https://t.me/+CIA2nWh5thE2ZWFk" target="_blank" rel="noopener">Unisciti</a>
+        </div>
 
-      📢 <strong>CANALE TELEGRAM UFFICIALE 📲</strong><br>
-      👉 <a href="https://t.me/+CIA2nWh5thE2ZWFk" target="_blank">t.me/+CIA2nWh5thE2ZWFk</a><br><br>
+        <!-- BOT TELEGRAM -->
+        <div class="item">
+          <div class="ico">🤖</div>
+          <div class="txt">
+            <div class="lbl">Bot Telegram Ufficiale</div>
+            <div class="mut">@bpfam2bot</div>
+          </div>
+          <a class="btn" href="https://t.me/bpfam2bot" target="_blank" rel="noopener">Avvia</a>
+        </div>
 
-      👾 <strong>BOT TELEGRAM UFFICIALE 🤖</strong><br>
-      👉 <a href="https://t.me/bpfam2bot" target="_blank">@bpfam2bot</a>
-    </div>
+        <!-- CANALE POTATO -->
+        <div class="item">
+          <div class="ico">🥔</div>
+          <div class="txt">
+            <div class="lbl">Canale Potato</div>
+            <div class="mut">Link di invito</div>
+          </div>
+          <a class="btn" href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank" rel="noopener">Apri</a>
+        </div>
+      </div>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <div class="section">
-      🥔 <strong>CANALE POTATO 📲</strong><br>
-      👉 <a href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank">https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA</a>
-    </div>
+      <p class="subtitle">
+        <b>⚠️ Attenzione:</b> diffida da profili o canali non presenti in questo elenco.  
+        Solo i contatti elencati sono verificati e gestiti direttamente da <b>BPFAM Official</b>.
+      </p>
 
-    <div class="divider"></div>
+      <footer>
+        © 2025 — Powered by BPFAM Official Network | Management Division 💎
+      </footer>
+    </section>
+  </main>
 
-    <p><strong>⚠️ Diffida da profili o canali non presenti in questo elenco.</strong><br>
-    Solo i contatti elencati sono verificati e gestiti direttamente da <strong>BPFAM Official</strong>.</p>
+  <script>
+    // Parallax tilt molto leggero sulla card
+    const card = document.getElementById('card');
+    let rAF;
+    function tilt(e){
+      const b = card.getBoundingClientRect();
+      const x = (e.clientX - b.left) / b.width;
+      const y = (e.clientY - b.top)  / b.height;
+      const rx = (y - .5) * -6;  // rotazione X
+      const ry = (x - .5) *  6;  // rotazione Y
+      card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+    }
+    function reset(){ card.style.transform = 'rotateX(0deg) rotateY(0deg)'; }
+    card.addEventListener('mousemove', (e)=>{ cancelAnimationFrame(rAF); rAF = requestAnimationFrame(()=>tilt(e)); });
+    card.addEventListener('mouseleave', ()=>{ reset(); });
 
-    <div class="divider"></div>
-
-    <footer>
-      © 2025 — Powered by BPFAM Official Network | Management Division 💎
-    </footer>
-  </div>
+    // Se vuoi forzare apertura in Telegram in-app su iOS/Android,
+    // puoi aggiungere tg:// al bisogno; qui lasciamo i link standard.
+  </script>
 </body>
 </html>
