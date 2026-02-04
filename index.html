@@ -28,7 +28,7 @@
       --radius:22px;
       --shadow: 0 18px 60px rgba(0,0,0,.55);
       --glow: 0 0 22px rgba(0,224,199,.45), 0 0 80px rgba(0,224,199,.18);
-      --logo: url(LOGO_URL); /* <-- Sostituisci con il tuo logo oro se vuoi */
+      --logo: url(LOGO_URL);
     }
 
     *{box-sizing:border-box}
@@ -43,7 +43,6 @@
       overflow-x:hidden;
       padding:42px 20px;
       perspective:1000px;
-      /* GRID 3D */
       --g: color-mix(in oklab, var(--grid), transparent 85%);
       background-image:
         linear-gradient(90deg, var(--g) 1px, transparent 1px),
@@ -75,7 +74,6 @@
       overflow:hidden;
     }
 
-    /* bordo glow */
     .card:before{
       content:"";
       position:absolute; inset:-2px;
@@ -127,7 +125,6 @@
       margin:18px 0 22px;
     }
 
-    /* LISTE / BUTTONS */
     .list{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -181,12 +178,10 @@
     .btn:hover{ transform: translateY(-2px); box-shadow: 0 8px 26px rgba(0,224,199,.22) }
     .btn:active{ transform: translateY(0) }
 
-    /* FOOT */
     footer{
       margin-top:24px; text-align:center; color:var(--muted); font-size:13px;
     }
 
-    /* Parallax tilt */
     .tilt{ transform-style:preserve-3d }
     .tilt:hover .logo{ transform: translateZ(45px) rotateX(2deg) rotateY(-3deg) }
   </style>
@@ -195,7 +190,6 @@
   <main class="wrap">
     <section class="card tilt" id="card">
       <div class="head">
-        <!-- Cambia src se vuoi usare il logo oro: sostituisci con il tuo URL -->
         <img class="logo" src="https://i.postimg.cc/N0WNKqZD/5-F5-DFE41-C80-D-4-FC2-B4-F6-D105844664-B3.jpg" alt="BPFAM Logo">
         <h1>BPFAM CONTATTI UFFICIALI 💎</h1>
       </div>
@@ -208,7 +202,8 @@
       <div class="divider"></div>
 
       <div class="list">
-        <!-- INSTAGRAM PRINCIPALE (nuovo) -->
+
+        <!-- INSTAGRAM PRINCIPALE -->
         <div class="item">
           <div class="ico">📸</div>
           <div class="txt">
@@ -238,14 +233,14 @@
           <a class="btn" href="https://instagram.com/bpfam_official420media" target="_blank" rel="noopener">Apri</a>
         </div>
 
-        <!-- CONTATTO TELEGRAM -->
+        <!-- CONTATTO TELEGRAM (MODIFICATO) -->
         <div class="item">
           <div class="ico">💬</div>
           <div class="txt">
             <div class="lbl">Contatto Telegram</div>
             <div class="mut">@bpfamprivateclub</div>
           </div>
-          <a class="btn" href="@bpfamprivateclub"target="_blank" rel="noopener">Apri</a>
+          <a class="btn" href="https://t.me/bpfamprivateclub" target="_blank" rel="noopener">Apri</a>
         </div>
 
         <!-- CANALE TELEGRAM -->
@@ -255,7 +250,7 @@
             <div class="lbl">Canale Telegram Ufficiale</div>
             <div class="mut">t.me/+CIA2nWh5thE2ZWFk</div>
           </div>
-          <a class="btn" href="https://t.me/+6Rdz_JD0w61kMWU0"target="_blank" rel="noopener">Unisciti</a>
+          <a class="btn" href="https://t.me/+6Rdz_JD0w61kMWU0" target="_blank" rel="noopener">Unisciti</a>
         </div>
 
         <!-- BOT TELEGRAM -->
@@ -265,7 +260,7 @@
             <div class="lbl">Bot Telegram Ufficiale</div>
             <div class="mut">@bpfam2bot</div>
           </div>
-          <a class="btn" href="https://t.me/Bpfamofficial_bot"target="_blank" rel="noopener">Avvia</a>
+          <a class="btn" href="https://t.me/Bpfamofficial_bot" target="_blank" rel="noopener">Avvia</a>
         </div>
 
         <!-- CANALE POTATO -->
@@ -277,6 +272,7 @@
           </div>
           <a class="btn" href="https://ptwdym158.org/joinchat/G--4LG_fBcIfdzhbt9mxNA" target="_blank" rel="noopener">Apri</a>
         </div>
+
       </div>
 
       <div class="divider"></div>
@@ -293,23 +289,19 @@
   </main>
 
   <script>
-    // Parallax tilt molto leggero sulla card
     const card = document.getElementById('card');
     let rAF;
     function tilt(e){
       const b = card.getBoundingClientRect();
       const x = (e.clientX - b.left) / b.width;
       const y = (e.clientY - b.top)  / b.height;
-      const rx = (y - .5) * -6;  // rotazione X
-      const ry = (x - .5) *  6;  // rotazione Y
+      const rx = (y - .5) * -6;
+      const ry = (x - .5) *  6;
       card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
     }
     function reset(){ card.style.transform = 'rotateX(0deg) rotateY(0deg)'; }
     card.addEventListener('mousemove', (e)=>{ cancelAnimationFrame(rAF); rAF = requestAnimationFrame(()=>tilt(e)); });
     card.addEventListener('mouseleave', ()=>{ reset(); });
-
-    // Se vuoi forzare apertura in Telegram in-app su iOS/Android,
-    // puoi aggiungere tg:// al bisogno; qui lasciamo i link standard.
   </script>
 </body>
 </html>
